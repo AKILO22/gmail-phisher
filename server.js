@@ -45,6 +45,6 @@ app.get('*', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Phishing server running on http://localhost:${PORT}`);
-  console.log(`Admin panel: http://localhost:${PORT}/admin`);
+  console.log(`Phishing server running on http://localhost:${3000}`);
+  console.log(`Admin panel: http://localhost:${3000}/admin`);
 });
